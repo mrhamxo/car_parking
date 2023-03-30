@@ -33,22 +33,27 @@
             <span>Admin Profile</span>
         </a>
     </li>
-
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - Faculty members -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Components</span>
+        <a class="nav-link" href="faculty.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Faculty members</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    </li>
+
+    <!-- Nav Item - Parking Slots Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Parking Slots</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="faculty.php">Faculties</a>
-                <a class="collapse-item" href="aboutus.php">About Us</a>
+                <a class="collapse-item" href="add_slot.php">Add Slot</a>
+                <a class="collapse-item" href="manage_slot.php">Mange Slot</a>
             </div>
         </div>
     </li>
-
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -80,11 +85,11 @@
             <i class="fas fa-fw fa-folder"></i>
             <span>Pages</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <!-- <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="login.php">Login</a>
             </div>
-        </div>
+        </div> -->
     </li>
 
     <!-- Nav Item - Charts -->

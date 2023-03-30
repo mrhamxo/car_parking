@@ -32,7 +32,7 @@ include('includes/navbar.php');
                                     while ($query_array = mysqli_fetch_array($result)) {
                                         $admin = $query_array['admin'];
 
-                                        echo '<h4 class="font-weight-bolder">'.$admin.'</h4>';
+                                        echo '<h4 class="font-weight-bolder">' . $admin . '</h4>';
                                     }
                                     ?>
                                 </div>
@@ -66,7 +66,7 @@ include('includes/navbar.php');
                                     while ($query_array = mysqli_fetch_array($result)) {
                                         $user = $query_array['user'];
 
-                                        echo '<h4 class="font-weight-bolder">'.$user.'</h4>';
+                                        echo '<h4 class="font-weight-bolder">' . $user . '</h4>';
                                     }
                                     ?>
                                 </div>
@@ -125,6 +125,7 @@ include('includes/navbar.php');
             </div>
         </div>
     </div>
+</div>
 </div>
 <!-- /.container-fluid -->
 <?php

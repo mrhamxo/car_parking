@@ -45,9 +45,9 @@ include('includes/navbar.php');
 <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Faculties
+            <h6 class="m-0 font-weight-bold text-primary">Faculty Members
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#facultyModal">
+                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#facultyModal">
                     ADD
                 </button>
             </h6>
@@ -70,7 +70,7 @@ include('includes/navbar.php');
 
                 if (mysqli_num_rows($result) > 0) {
                 ?>
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
