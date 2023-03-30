@@ -33,6 +33,13 @@
             <span>Admin Profile</span>
         </a>
     </li>
+      <!-- Nav Item - Faculty members -->
+      <li class="nav-item">
+        <a class="nav-link" href="user_car.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>User Car</span>
+        </a>
+    </li>
     <!-- Nav Item - Faculty members -->
     <li class="nav-item">
         <a class="nav-link" href="faculty.php">
