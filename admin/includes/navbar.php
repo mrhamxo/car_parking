@@ -48,7 +48,14 @@
             </div>
         </div>
     </li>
+     <!-- Nav Item - Pages Car Slots Menu -->
+     <li class="nav-item">
+        <a class="nav-link" href="user_car.php">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Car Slots</span>
 
+        </a>
+    </li>
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
