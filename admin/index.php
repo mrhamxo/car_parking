@@ -125,8 +125,18 @@ include('includes/navbar.php');
             </div>
         </div>
     </div>
+    <!-- Car Slot Box -->
+    <div class="row my-4 justify-content-center">
+        <div style="width: 100px; height: 100px; background-color: green">
+            <h1>green</h1>
+        </div>
+        <div style="width: 100px; height: 100px; background-color: red">
+            <h1>red</h1>
+        </div>
+    </div>
 </div>
 </div>
+
 <!-- /.container-fluid -->
 <?php
 include('includes/scripts.php');
