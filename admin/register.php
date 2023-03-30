@@ -56,7 +56,7 @@ $result = mysqli_query($connect, $sql);
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Users Profile
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">
                     ADD
                 </button>
             </h6>
@@ -73,7 +73,7 @@ $result = mysqli_query($connect, $sql);
             // }
             ?>
 
-            <table class="table table-striped">
+            <table class="table table-striped table-sm">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
