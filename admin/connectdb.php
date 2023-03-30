@@ -2,7 +2,7 @@
     $servername = 'localhost';
     $db_username = 'root';
     $db_password = '';
-    $db_name = 'admin_dashboard';
+    $db_name = 'car_parking';
 
     // create connection
     $connect = new mysqli($servername, $db_username, $db_password, $db_name);
