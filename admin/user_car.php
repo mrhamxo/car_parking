@@ -18,9 +18,9 @@ include('includes/navbar.php');
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form action="" method="POST">
                         <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                        if (isset($_POST["submit"])){
                             $par_address = $_POST['park_address'];
                             $par_slots = $_POST['park_slots'];
                             $par_area = $_POST['park_area'];
@@ -105,7 +105,7 @@ include('includes/navbar.php');
                             <tr>
                                 <td><?php echo $row['id']; ?></td>
                                 <td><?php echo $row['parking _address'];?></td>
-                                <td><?php echo $row['parking_slots']; ?></td>
+                                <td><?php echo $row['slot_name']; ?></td>
                                 <td><?php echo $row['parking_area']; ?></td>
                                 <td><?php echo $row['status']; ?></td>
                                 <td><?php echo $row['action']; ?></td>
