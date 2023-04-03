@@ -126,7 +126,7 @@ include('includes/navbar.php');
         </div>
     </div>
 </div>
-<div class="container" style="margin-left:100px">
+<div class="container" style="margin-left:70px">
     <div class="row">
         <div class="col-2" id="box"></div>
         <div class="col-2" id="box"></div>
