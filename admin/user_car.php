@@ -20,7 +20,7 @@ include('includes/navbar.php');
                 <div class="modal-body">
                     <form action="#" method="POST">
                         <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $par_address = $_POST['park_address'];
                             $par_slots = $_POST['park_slots'];
                             $par_area = $_POST['park_area'];
@@ -36,8 +36,16 @@ include('includes/navbar.php');
                             <label>Parking Slots</label>
                             <select class="form-control" name="park_slots">
                                 <option>Please Add Car Slots</option>
-                                <option value="slots">1</option>
-                                <option value="slots">2</option>
+                                <?php
+                                $sql = "SELECT * FROM park_slot";
+                                $result = mysqli_query($connect, $sql) or die("Query Unsuccessful");
+
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                ?>
+                                    <option value="<?php echo $row['id'] ?>"><?php echo $row['slot_name'] ?></option>
+                                <?php
+                                }
+                                ?>
                             </select>
                         </div>
                         <div class="form-group">
@@ -89,14 +97,15 @@ include('includes/navbar.php');
                     </thead>
                     <tbody>
                         <?php
-                        $sql1 = "SELECT * FROM `user_car`";
+                        // $sql1 = "SELECT * FROM `user_car`";
+                        $sql1 = "SELECT * FROM user_car JOIN park_slot WHERE user_car.parking_slots = park_slot.id";
                         $res = mysqli_query($connect, $sql1);
                         while ($row = mysqli_fetch_assoc($res)) {
                         ?>
                             <tr>
                                 <td><?php echo $row['id']; ?></td>
-                                <td><?php echo $row['parking _address'];?></td>
-                                <td><?php echo $row['parking_slots']; ?></td>
+                                <td><?php echo $row['parking _address']; ?></td>
+                                <td><?php echo $row['slot_name']; ?></td>
                                 <td><?php echo $row['parking_area']; ?></td>
                                 <td><?php echo $row['status']; ?></td>
                                 <td><?php echo $row['action']; ?></td>
