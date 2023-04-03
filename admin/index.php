@@ -5,7 +5,7 @@ include('includes/navbar.php');
 ?>
 
 <!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container-fluid" style="margin-left:100px">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <!-- Content Row -->
@@ -125,14 +125,14 @@ include('includes/navbar.php');
             </div>
         </div>
     </div>
-    <!-- Car Slot Box -->
-    <div class="row my-4 justify-content-center">
-        <div style="width: 100px; height: 100px; background-color: green">
-            <h1>green</h1>
-        </div>
-        <div style="width: 100px; height: 100px; background-color: red">
-            <h1>red</h1>
-        </div>
+</div>
+<div class="container" style="margin-left:100px">
+    <div class="row">
+        <div class="col-2" id="box"></div>
+        <div class="col-2" id="box"></div>
+        <div class="col-2" id="box"></div>
+        <div class="col-2" id="box"></div>
+        <div class="col-2" id="box"></div>
     </div>
 </div>
 </div>
