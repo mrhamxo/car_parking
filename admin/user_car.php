@@ -116,7 +116,7 @@ include('includes/navbar.php');
                                 <td><?php echo $row['slot_name']; ?></td>
                                 <td><?php echo $row['parking_area']; ?></td>
                                 <td><?php echo $row['status']; ?></td>
-                                <td><?php echo $row['action']; ?></td>
+                                <td><a href="delete.php" class="btn btn-primary" nam="delete" value="<?php echo $row['id'];?>">Delete</a></td>
                             </tr>
                         <?php
                         }
