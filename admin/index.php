@@ -136,7 +136,7 @@ include('includes/navbar.php');
     <div class="row">
         <div class="col-2" id="box">
             <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking _address'];?>
+            <?php echo "Parking_Address:".$row['parking_address'];?>
             <?php echo "Parking_Slots:".$row['parking_slots'];?>
             <?php echo "Parking_Area:".$row['parking_area'];?>
             <?php echo "Slots_Name:".$row['slot_name'];?>
@@ -144,28 +144,28 @@ include('includes/navbar.php');
         </div>
         <div class="col-2" id="box">
             <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking _address'];?>
+            <?php echo "Parking_Address:".$row['parking_address'];?>
             <?php echo "Parking_Slots:".$row['parking_slots'];?>
             <?php echo "Parking_Area:".$row['parking_area'];?>
             <?php echo "Slots_Name:".$row['slot_name'];?>
         </div>
         <div class="col-2" id="box">
             <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking _address'];?>
+            <?php echo "Parking_Address:".$row['parking_address'];?>
             <?php echo "Parking_Slots:".$row['parking_slots'];?>
             <?php echo "Parking_Area:".$row['parking_area'];?>
             <?php echo "Slots_Name:".$row['slot_name'];?>
         </div>
         <div class="col-2" id="box">
             <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking _address'];?>
+            <?php echo "Parking_Address:".$row['parking_address'];?>
             <?php echo "Parking_Slots:".$row['parking_slots'];?>
             <?php echo "Parking_Area:".$row['parking_area'];?>
             <?php echo "Slots_Name:".$row['slot_name'];?>
         </div>
         <div class="col-2" id="box">
             <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking _address'];?>
+            <?php echo "Parking_Address:".$row['parking_address'];?>
             <?php echo "Parking_Slots:".$row['parking_slots'];?>
             <?php echo "Parking_Area:".$row['parking_area'];?>
             <?php echo "Slots_Name:".$row['slot_name'];?>
