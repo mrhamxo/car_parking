@@ -93,8 +93,7 @@ include('includes/navbar.php');
                                     </div>
                                     <div class="col">
                                         <div class="progress progress-sm mr-2">
-                                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -128,48 +127,23 @@ include('includes/navbar.php');
     </div>
 </div>
 <div class="container" style="margin-left:70px">
-    <?php 
-        $sql1 = "SELECT * FROM user_car JOIN park_slot WHERE user_car.parking_slots = park_slot.id";
-        $res=mysqli_query($connect,$sql1);
-        $row=mysqli_fetch_assoc($res);
-        ?>
+
     <div class="row">
-        <div class="col-2" id="box">
-            <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking_address'];?>
-            <?php echo "Parking_Slots:".$row['parking_slots'];?>
-            <?php echo "Parking_Area:".$row['parking_area'];?>
-            <?php echo "Slots_Name:".$row['slot_name'];?>
-            </ul>
-        </div>
-        <div class="col-2" id="box">
-            <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking_address'];?>
-            <?php echo "Parking_Slots:".$row['parking_slots'];?>
-            <?php echo "Parking_Area:".$row['parking_area'];?>
-            <?php echo "Slots_Name:".$row['slot_name'];?>
-        </div>
-        <div class="col-2" id="box">
-            <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking_address'];?>
-            <?php echo "Parking_Slots:".$row['parking_slots'];?>
-            <?php echo "Parking_Area:".$row['parking_area'];?>
-            <?php echo "Slots_Name:".$row['slot_name'];?>
-        </div>
-        <div class="col-2" id="box">
-            <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking_address'];?>
-            <?php echo "Parking_Slots:".$row['parking_slots'];?>
-            <?php echo "Parking_Area:".$row['parking_area'];?>
-            <?php echo "Slots_Name:".$row['slot_name'];?>
-        </div>
-        <div class="col-2" id="box">
-            <?php echo "Car_Id:".$row['id'];?>
-            <?php echo "Parking_Address:".$row['parking_address'];?>
-            <?php echo "Parking_Slots:".$row['parking_slots'];?>
-            <?php echo "Parking_Area:".$row['parking_area'];?>
-            <?php echo "Slots_Name:".$row['slot_name'];?>
-        </div>
+        <?php
+        $sql1 = "SELECT * FROM user_car JOIN park_slot WHERE user_car.parking_slots = park_slot.slot_id";
+        $res = mysqli_query($connect, $sql1);
+        while ($row = mysqli_fetch_assoc($res)) {
+        ?>
+            <div class="col-2" id="box">
+                <?php echo "Car_Id:" . $row['id']; ?>
+                <?php echo "Parking_Address:" . $row['parking_address']; ?>
+                <?php echo "Parking_Slots:" . $row['parking_slots']; ?>
+                <?php echo "Parking_Area:" . $row['parking_area']; ?>
+                <?php echo "Slots_Name:" . $row['slot_name']; ?>
+            </div>
+        <?php
+        }
+        ?>
     </div>
 
 </div>

@@ -32,7 +32,7 @@ include('includes/navbar.php');
                             $sql = "INSERT INTO `user_car` (`parking_address`, `parking_slots`, `parking_area`, `status`, `action`) VALUES ('$par_address', '$par_slots', '$par_area', '1', '0')";
                             $res = mysqli_query($connect, $sql);
                             if ($res) {
-                                header("location:user_car.php");
+                                // header("location:user_car.php");
                             }
                         }
                         ?>
@@ -50,7 +50,7 @@ include('includes/navbar.php');
 
                                 while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
-                                    <option value="<?php echo $row['id'] ?>"><?php echo $row['slot_name'] ?></option>
+                                    <option value="<?php echo $row['slot_id'] ?>"><?php echo $row['slot_name'] ?></option>
                                 <?php
                                 }
                                 ?>
@@ -106,7 +106,7 @@ include('includes/navbar.php');
                     <tbody>
                         <?php
                         // $sql1 = "SELECT * FROM `user_car`";
-                        $sql1 = "SELECT * FROM user_car JOIN park_slot WHERE user_car.parking_slots = park_slot.id";
+                        $sql1 = "SELECT * FROM user_car JOIN park_slot WHERE user_car.parking_slots = park_slot.slot_id";
                         $res = mysqli_query($connect, $sql1);
                         while ($row = mysqli_fetch_assoc($res)) {
                         ?>
