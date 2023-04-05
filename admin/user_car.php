@@ -23,7 +23,7 @@ include('includes/navbar.php');
                 </div>
                 <div class="modal-body">
 
-                    <form action="" method="POST">
+                    <form action="user_car.php" method="POST">
                         <?php
                         if (isset($_POST["submit"])) {
                             $par_address = $_POST['park_address'];
