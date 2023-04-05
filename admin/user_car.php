@@ -22,17 +22,17 @@ include('includes/navbar.php');
                     </button>
                 </div>
                 <div class="modal-body">
-                    
+
                     <form action="" method="POST">
                         <?php
-                        if(isset($_POST["submit"])){
+                        if (isset($_POST["submit"])) {
                             $par_address = $_POST['park_address'];
                             $par_slots = $_POST['park_slots'];
                             $par_area = $_POST['park_area'];
                             $sql = "INSERT INTO `user_car` (`parking_address`, `parking_slots`, `parking_area`, `status`, `action`) VALUES ('$par_address', '$par_slots', '$par_area', '1', '0')";
                             $res = mysqli_query($connect, $sql);
-                            if($res){
-                            header("location:user_car.php");
+                            if ($res) {
+                                header("location:user_car.php");
                             }
                         }
                         ?>
@@ -112,11 +112,17 @@ include('includes/navbar.php');
                         ?>
                             <tr>
                                 <td><?php echo $row['id']; ?></td>
-                                <td><?php echo $row['parking_address'];?></td>
+                                <td><?php echo $row['parking_address']; ?></td>
                                 <td><?php echo $row['slot_name']; ?></td>
                                 <td><?php echo $row['parking_area']; ?></td>
-                                <td><?php echo $row['status']; ?></td>
-                                <td><a href="delete.php" class="btn btn-primary" nam="delete" value="<?php echo $row['id'];?>">Delete</a></td>
+                                <td>
+                                    <?php if ($row['status'] == '1') { ?>
+                                        <span class="badge bg-warning p-2 text-white">Active</span>
+                                    <?php } else { ?>
+                                        <span class="badge bg-danger p-2 text-white">Inactive</span>
+                                    <?php } ?>
+                                </td>
+                                <td><a href="delete.php" class="btn btn-primary" nam="delete" value="<?php echo $row['id']; ?>">Delete</a></td>
                             </tr>
                         <?php
                         }
