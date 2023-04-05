@@ -134,16 +134,36 @@ include('includes/navbar.php');
         $res = mysqli_query($connect, $sql1);
         while ($row = mysqli_fetch_assoc($res)) {
         ?>
-            <div class="col-2" id="box">
-                <?php echo "Car_Id:" . $row['id']; ?>
-                <?php echo "Parking_Address:" . $row['parking_address']; ?>
-                <?php echo "Parking_Slots:" . $row['parking_slots']; ?>
-                <?php echo "Parking_Area:" . $row['parking_area']; ?>
-                <?php echo "Slots_Name:" . $row['slot_name']; ?>
-            </div>
+            <?php
+            if ($row['status'] == 1) {
+            ?>
+
+                <div class="col-2 p-4 pb-4 bg-success text-white m-2 text-center">
+                    <?php echo "Car_Id:" . $row['id']; ?>
+                    <?php echo "Parking_Address:" . $row['parking_address']; ?>
+                    <?php echo "Parking_Slots:" . $row['parking_slots']; ?>
+                    <?php echo "Parking_Area:" . $row['parking_area']; ?>
+                    <?php echo "Slots_Name:" . $row['slot_name']; ?>
+                </div>
+            <?php
+            } else {
+            ?>
+                <div class="col-2 p-4 pb-4 bg-danger text-white m-2 text-center">
+                    <?php echo "Car_Id:" . $row['id']; ?>
+                    <?php echo "Parking_Address:" . $row['parking_address']; ?>
+                    <?php echo "Parking_Slots:" . $row['parking_slots']; ?>
+                    <?php echo "Parking_Area:" . $row['parking_area']; ?>
+                    <?php echo "Slots_Name:" . $row['slot_name']; ?>
+                </div>
+            <?php
+            }
+            ?>
+
         <?php
         }
+
         ?>
+
     </div>
 
 </div>
