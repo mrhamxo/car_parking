@@ -5,7 +5,7 @@ include('security.php');
 if (isset($_POST['check_submit_btn'])) {
     $email = $_POST["email_id"];
 
-    $email_query = "SELECT * FROM admin_profile WHERE email='$email'";
+    $email_query = "SELECT * FROM users WHERE email='$email'";
     $email_result = mysqli_query($connect, $email_query);
 
     if (mysqli_num_rows($email_result) > 0) {
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     $usertype = $_POST['usertype'];
 
     // checking email
-    $email_query = "SELECT * FROM `admin_profile` WHERE email='$email'";
+    $email_query = "SELECT * FROM `users` WHERE email='$email'";
     $email_result = mysqli_query($connect, $email_query);
 
     if (mysqli_num_rows($email_result) > 0) {
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
 
         // if ($password === $cpassword) {
         // data insert to database method
-        $sql = "INSERT INTO `admin_profile`(username, email, password, usertype) VALUES ('$username', '$email', '$password', '$usertype')";
+        $sql = "INSERT INTO `users`(username, email, password, usertype) VALUES ('$username', '$email', '$password', '$usertype')";
         $result = mysqli_query($connect, $sql);
 
         if ($result) {
@@ -64,7 +64,7 @@ if (isset($_POST['login_btn'])) {
     $email_login = $_POST['email'];
     $password_login = $_POST['password'];
 
-    $sql = "SELECT * FROM `admin_profile` WHERE email='$email_login' AND password='$password_login' ";
+    $sql = "SELECT * FROM `users` WHERE email='$email_login' AND password='$password_login' ";
     $result = mysqli_query($connect, $sql);
     $usertypes = mysqli_fetch_assoc($result);
 
@@ -98,7 +98,7 @@ if (isset($_POST['updatebtn'])) {
     $password = $_POST['edit_password'];
     $usertype = $_POST['update_usertype'];
 
-    $sql = "UPDATE `admin_profile` SET username='$username', email='$email', password='$password', usertype='$usertype' where id=$id";
+    $sql = "UPDATE `users` SET username='$username', email='$email', password='$password', usertype='$usertype' where id=$id";
 
     $result = mysqli_query($connect, $sql);
 
@@ -118,7 +118,7 @@ if (isset($_POST['updatebtn'])) {
 if (isset($_POST["delete_btn"])) {
     $id = $_POST["delete_id"];
 
-    $sql = "DELETE FROM `admin_profile` WHERE id = $id";
+    $sql = "DELETE FROM `users` WHERE id = $id";
     $result = mysqli_query($connect, $sql);
 
     if ($result) {

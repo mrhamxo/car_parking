@@ -21,10 +21,10 @@ include('includes/navbar.php');
                                 </div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">
                                     <?php
-                                    // $sql = "SELECT id FROM `admin_profile` ORDER BY id";
+                                    // $sql = "SELECT id FROM `users` ORDER BY id";
                                     $sql = "SELECT
                                     COUNT(if(usertype='admin', 1, NULL)) as admin
-                                    FROM `admin_profile`";
+                                    FROM `users`";
 
                                     $result = mysqli_query($connect, $sql);
                                     // $row = mysqli_num_rows($result);
@@ -58,7 +58,7 @@ include('includes/navbar.php');
                                     <?php
                                     $sql = "SELECT
                                      COUNT(if(usertype='user', 1, NULL)) as user
-                                     FROM `admin_profile`";
+                                     FROM `users`";
 
                                     $result = mysqli_query($connect, $sql);
                                     $row = mysqli_num_rows($result);

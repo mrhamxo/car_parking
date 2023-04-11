@@ -12,7 +12,7 @@ include('includes/navbar.php');
     <?php
     if (isset($_POST['edit_btn'])) {
         $id = $_POST['edit_id'];
-        $sql = "SELECT * FROM `admin_profile` WHERE id='$id'";
+        $sql = "SELECT * FROM `users` WHERE id='$id'";
         $result = mysqli_query($connect, $sql);
 
         foreach ($result as $row) {

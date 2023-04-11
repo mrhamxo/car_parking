@@ -47,7 +47,7 @@ include('includes/navbar.php');
 </div>
 
 <?php
-$sql = "SELECT * FROM `admin_profile` WHERE 1";
+$sql = "SELECT * FROM `users` WHERE 1";
 $result = mysqli_query($connect, $sql);
 ?>
 
