@@ -158,10 +158,8 @@ include('includes/navbar.php');
             <?php
             }
             ?>
-
         <?php
         }
-
         ?>
 
     </div>

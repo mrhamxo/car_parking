@@ -77,7 +77,7 @@ if (isset($_POST['login_btn'])) {
 
             $_SESSION['username'] = $email_login;
             if($usertypes['status'] == 1){
-                header('location: users/home.php');
+                header('location:../user/dashboard.php');
 
             }else{
                 echo "Please contact to admin";
